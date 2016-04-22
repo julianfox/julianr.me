@@ -18,11 +18,29 @@ h6 {
 
 h1,
 .alpha {
+    font-family: 'Open Sans Condensed', sans-serif;
+    @include font-size($font-size--xlarge);
+    margin-top: 0;
+    margin-bottom: $spacing--small;
+    color: #111;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        @include font-size($font-size--large);
+    }
 
 }
 
 h2,
 .beta {
+    font-family: 'Open Sans Condensed', sans-serif;
+    @include font-size($font-size--large);
+    margin-top: 0;
+    margin-bottom: $spacing--large;
+    color: #222;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        @include font-size($font-size--medium);
+    }
 
 }
 
@@ -50,15 +68,23 @@ h6,
  * -------------------- */
 
 p {
+    font-family: 'Gentium Book Basic', serif;
+    @include font-size($font-size--medium);
+    line-height: 1.6em;
+    color: #111;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        @include font-size($font-size--small);
+    }
 
 }
 
 a {
-
+    color: #111;
 }
 
 p a {
-
+    color: #111;
 }
 
 /* MiSC elements

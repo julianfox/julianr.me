@@ -32,7 +32,7 @@ body {
 
 #content {
     position: absolute;
-    width: 50%;
+    width: 440px;
     top: 40px;
     bottom: 40px;
     left: 40px;
@@ -48,6 +48,7 @@ body {
         padding-top: 20px;
         padding-left: 0;
         color: #111;
+        @include font-size($font-size--small);
 
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
             @include font-size($font-size--small);

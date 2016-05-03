@@ -1,4 +1,3 @@
-/* global window, Modernizr, document */
 'use strict';
 
 var $ = require('jQuery'),
@@ -26,7 +25,7 @@ $(document).ready(function() {
     function init() {
         container = document.getElementById('background');
 
-        camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
+        camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000);
 
         controls = new THREE.FirstPersonControls( camera );
         controls.lookVertical = false;
@@ -39,14 +38,14 @@ $(document).ready(function() {
 
         data = generateHeight( worldWidth, worldDepth );
 
-        camera.position.y = data[ worldHalfWidth + worldHalfDepth * worldWidth ] * 10 + 1000;
+        camera.position.y = data[worldHalfWidth + worldHalfDepth * worldWidth] * 10 + 1000;
 
-        var geometry = new THREE.PlaneBufferGeometry( 7500, 7500, worldWidth - 1, worldDepth - 1 );
-        geometry.rotateX( - Math.PI / 2 );
+        var geometry = new THREE.PlaneBufferGeometry(7500, 7500, worldWidth - 1, worldDepth - 1);
+        geometry.rotateX(- Math.PI / 2);
 
         var vertices = geometry.attributes.position.array;
 
-        for ( var i = 0, j = 0, l = vertices.length; i < l; i ++, j += 3 ) {
+        for (var i = 0, j = 0, l = vertices.length; i < l; i ++, j += 3) {
             vertices[ j + 1 ] = data[ i ] * 10;
         }
 
@@ -83,14 +82,11 @@ $(document).ready(function() {
         perlin = new ImprovedNoise(), quality = 1, z = Math.random() * 100;
 
         for ( var j = 0; j < 4; j ++ ) {
-
             for ( var i = 0; i < size; i ++ ) {
                 var x = i % width, y = ~~ ( i / width );
                 data[ i ] += Math.abs( perlin.noise( x / quality, y / quality, z ) * quality * 1.75 );
             }
-
             quality *= 5;
-
         }
 
         return data;
@@ -119,8 +115,7 @@ $(document).ready(function() {
             imageData[ i + 2 ] = 78 * ( 0.5 + data[ j ] * 0.007 );
         }
 
-        context.putImageData( image, 0, 0 );
-        // Scaled 4x
+        context.putImageData(image, 0, 0);
         canvasScaled = document.createElement( 'canvas' );
         canvasScaled.width = width * 4;
         canvasScaled.height = height * 4;

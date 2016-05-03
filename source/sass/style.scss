@@ -9,7 +9,6 @@
 @import 'helpers/reset';
 @import 'helpers/variables';
 @import 'helpers/mixins';
-@import 'helpers/media-query-output';
 
 /* Foundation
  * -------------------- */
@@ -17,16 +16,3 @@
 @import 'foundation/base';
 @import 'foundation/print';
 @import 'foundation/typography';
-
-/* Components
- * -------------------- */
-
-@import 'components/buttons';
-@import 'components/blocks';
-@import 'components/forms';
-
-/* Layout
- * -------------------- */
-
-@import 'layout/header';
-@import 'layout/footer';

@@ -533,62 +533,22 @@ th {
  *      }
  *
  */
-.media-block,
-.media-block__body,
+
 .clearfix {
   *zoom: 1;
 }
 
-.media-block:before,
-.media-block__body:before,
+
 .clearfix:before {
   content: ' ';
   display: table;
 }
 
-.media-block:after,
-.media-block__body:after,
+
 .clearfix:after {
   content: ' ';
   display: table;
   clear: both;
-}
-
-/**
-* Output media queries in the <body> element for JS-hooks
-* -----------------------------------------------------------------------------
-* More info here: http://zerosixthree.se/detecting-media-queries-with-javascript/
-*/
-/* Mixin that will print out the breakpoint names
- * -------------------- */
-/* Print our breakpoint names as a pseudo element on the body element
- * -------------------- */
-@media only screen and (min-width: 20em) {
-  body:after {
-    content: "bp-small";
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 40em) {
-  body:after {
-    content: "bp-medium";
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 60em) {
-  body:after {
-    content: "bp-large";
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 80em) {
-  body:after {
-    content: "bp-xl";
-    display: none;
-  }
 }
 
 /* Foundation
@@ -805,126 +765,5 @@ p a {
 
 /* MiSC elements
  * -------------------- */
-/* Components
- * -------------------- */
-/**
- * Buttons
- * -----------------------------------------------------------------------------
- */
-.button {
-  display: inline-block;
-  cursor: pointer;
-}
-
-/**
- * The Media Block
- * -----------------------------------------------------------------------------
- * Courtesy of Nicole Sullivan. Demo: http://goo.gl/sCZKxk
- *
- * Usage:
- *
- *      <div class="media-block">
- *          <a href="http://some-url-com" class="media-block__image-container">
- *              <img src="http://placehold.it/50x50" alt="">
- *          </a>
- *          <div class="media-block__body">
- *              <h2>I'm a heading inside a media block</h2>
- *              <p>And some text inside it as well</p>
- *          </div>
- *      </div>
- */
-.media-block {
-  margin: 1em;
-}
-
-.media-block__image-container {
-  float: left;
-  margin-right: 1em;
-}
-
-.media-block__image-container img {
-  display: block;
-}
-
-/**
- * The Flag Block
- * -----------------------------------------------------------------------------
- * Courtesy of Harry Roberts. Demo: http://goo.gl/YR3ffA, http://goo.gl/4B3uFm
- *
- * Usage:
- *
- *      <div class="flag-block">
- *          <div class="flag__image">
- *              <img src="image.jpg" alt="">
- *          </div>
- *          <div class="flag__body">
- *              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
- *          </div>
- *      </div>
- *
- */
-.flag-block {
-  display: table;
-  width: 100%;
-}
-
-.flag__image {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.flag--top .flag__image {
-  vertical-align: top;
-}
-
-.flag--bottom .flag__image {
-  vertical-align: bottom;
-}
-
-.flag__image {
-  padding-right: 1em;
-}
-
-.flag__image > img {
-  display: block;
-  max-width: none;
-}
-
-.flag--rev .flag__image > img {
-  padding-right: 0;
-  padding-left: 1em;
-}
-
-.flag__body {
-  width: 100%;
-}
-
-/**
- * Forms
- * -----------------------------------------------------------------------------
- */
-input[type=text],
-input[type=search],
-input[type=url],
-input[type=email],
-input[type=number],
-textarea {
-  width: 100%;
-}
-
-textarea {
-  resize: vertical;
-}
-
-/* Layout
- * -------------------- */
-/**
- * Header
- * -----------------------------------------------------------------------------
- */
-/**
- * Footer
- * -----------------------------------------------------------------------------
- */
 
 /*# sourceMappingURL=style.css.map */
